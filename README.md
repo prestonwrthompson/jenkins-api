@@ -11,4 +11,5 @@ Save a file to `auth.sh` (ignored by git) with:
 
 USER=user
 TOKEN=token
+URL=localhost:8080
 ```

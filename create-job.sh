@@ -5,6 +5,6 @@
 
 source auth.sh
 
-CRUMB=$(curl -s "http://$USER:$TOKEN@localhost:8080/crumbIssuer/api/xml?xpath=concat(//crumbRequestField,\":\",//crumb)")
+CRUMB=$(curl -s "http://$USER:$TOKEN@$URL/crumbIssuer/api/xml?xpath=concat(//crumbRequestField,\":\",//crumb)")
 
-curl -X POST -H "$CRUMB" -H "Content-Type: application/xml" "http://$USER:$TOKEN@localhost:8080//createItem?name=$1" --data @jobs/configs/job1-config.xml
+curl -X POST -H "$CRUMB" -H "Content-Type: application/xml" "http://$USER:$TOKEN@$URL//createItem?name=$1" --data @jobs/configs/job1-config.xml
