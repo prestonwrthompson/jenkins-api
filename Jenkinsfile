@@ -1,5 +1,5 @@
 pipeline {
-    agent { docker { image 'bash:latest' } }
+    agent any
     stages {
         stage('Run') {
             steps {
